@@ -1,0 +1,16 @@
+Create a virtual environment
+-python -m venv {name of environment}
+
+Run the activate.bat file to activate our virutal environment
+    If we are in the directory that is holding our environment folder we can use the relative path from our shell 
+        - {name of the folder of our virtual environment}\Scripts\activate.bat
+    If NOT we need to reference the absolute the path, or the path from where we are in our shell 
+
+After we have installed our packages we can freeze our pip list and add it to a text file for easy installation
+    -pip freeze > requirements.txt
+
+If I want to use this file to update my pip list I can install it using
+    -pip install -r requirements.txt
+
+Deactivate our virtual environment
+    -Deactivate
