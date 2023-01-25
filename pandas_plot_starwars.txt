@@ -1,0 +1,11 @@
+use read json to get the json into a data frame. try and play around with different info you 
+can manipulate with the Data frame
+
+Some ideas:
+
+1. Plot all of the starships with a crew over 500 
+2. Plot all of the starships with a crew over 500 and hyperdrive rating of 2
+3. Put the name of the starship as the index column
+4. Plot the price of each starship in relation to the cargo capacity
+5. Plot the total number of charachters for each eye color 
+6. Plot the height for each charachters
