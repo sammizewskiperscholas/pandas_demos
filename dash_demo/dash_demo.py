@@ -54,5 +54,27 @@ app.layout = html.Div([
     
 ])
 
+#Use the app.calback decorator to connect our figure with our Dash Inputs and Outputs
+@app.callback(
+    Output(component_id='map', component_property='figure'),
+    [Input(component_id='year_dropdown', component_property='value')]
+)
+def draw_graph(user_selection):
+    print(user_selection)
+
+    df2=df[['State', user_selection]]
+
+    #use plotly express to draw our figure
+    fig= px.choropleth(
+        locationmode='USA-states',
+        locations= df2['State'],
+        scope='usa',
+        color= df2[user_selection],
+        color_continuous_scale= px.colors.sequential.Plotly3,
+        template='plotly_dark'
+    )
+
+    return fig 
+
 if __name__ == '__main__':
     app.run_server(debug=True)
